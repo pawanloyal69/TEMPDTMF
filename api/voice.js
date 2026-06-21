@@ -3,12 +3,7 @@ module.exports = async (req, res) => {
 
   const twiml = `<?xml version="1.0" encoding="UTF-8"?>
 <Response>
-  <Gather numDigits="1"
-          action="/api/gather"
-          method="POST">
-    <Say>Please press 1 to continue.</Say>
-  </Gather>
-  <Say>No input received. Goodbye.</Say>
+  <Dial answerOnBridge="true">+917206597688</Dial>
 </Response>`;
 
   res.status(200).send(twiml);
